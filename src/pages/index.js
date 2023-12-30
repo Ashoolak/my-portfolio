@@ -114,7 +114,7 @@ export default function Home() {
                   imageUrl={project.imageUrl}
                   projectTitle={project.title}
                   techStack={project.techStack}
-                  description={project.description}
+                  description={project.shortDescription}
                 />
               ))}
             </div>
