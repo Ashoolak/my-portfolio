@@ -1,4 +1,3 @@
-// data/workExperiences.js
 const workExperiences = [
   {
     id: 1,

@@ -7,13 +7,13 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.nav}>
-        <a className="text-2xl font-bold" href="#About">
-          Home
+        <a className="text-3xl font-bold" href="/#About">
+          Ashkan YZ
         </a>
       </div>
       <nav className={styles.nav}>
-        <a href="#Work-Experience">Work Experience</a>
-        <a href="#Projects">Projects</a>
+        <a href="/#Work-Experience">Work Experience</a>
+        <a href="/#Projects">Projects</a>
         <a href="../Resume.pdf" target="_blank" rel="noopener noreferrer">
           Resume
         </a>

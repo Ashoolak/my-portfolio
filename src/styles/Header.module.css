@@ -2,14 +2,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 2rem;
+  padding: 1rem 2rem;
   color: white;
   padding-top: 10px;
   position: sticky;
-  top: 0; /* Stick to the top */
-  background: rgba(41, 41, 41, 0.8); /* Adjust opacity as needed */
-  backdrop-filter: blur(10px); /* Creates the blur effect */
-  z-index: 10; /* Ensures the header is above other content */
+  top: 0;
+  background: rgba(41, 41, 41, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 10;
 }
 .nav :global(a) {
   display: inline-block;

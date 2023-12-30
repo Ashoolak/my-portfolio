@@ -4,8 +4,9 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import aboutStyles from '../styles/Home.module.css';
 import CompanyCard from '@/components/CompanyCard';
-import workExperienceStyles from '../styles/WorkExperience.module.css';
+import ProjectCard from '@/components/ProjectCard';
 import workExperiences from '@/data/workExperience';
+import projects from '@/data/projects';
 
 export default function Home() {
   const typedRef = useRef(null);
@@ -100,7 +101,25 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="Projects" className="min-h-screen"></section>
+        <section id="Projects" className="min-h-screen pt-28">
+          <div className="container mx-auto px-4 py-8">
+            <h2 className="text-5xl font-bold text-white mb-20 text-center">
+              Projects
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {projects.map((project) => (
+                <ProjectCard
+                  key={project.id}
+                  id={project.id}
+                  imageUrl={project.imageUrl}
+                  projectTitle={project.title}
+                  techStack={project.techStack}
+                  description={project.description}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </>
