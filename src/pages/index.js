@@ -1,118 +1,108 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import { useEffect, useRef } from 'react';
+import Typed from 'typed.js';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import aboutStyles from '../styles/Home.module.css';
+import CompanyCard from '@/components/CompanyCard';
+import workExperienceStyles from '../styles/WorkExperience.module.css';
+import workExperiences from '@/data/workExperience';
 
 export default function Home() {
+  const typedRef = useRef(null);
+
+  useEffect(() => {
+    const options = {
+      strings: ['Hello there,', "I'm Ashkan Yazdi Zadeh"],
+      typeSpeed: 50,
+      backSpeed: 35,
+      smartBackspace: true,
+      showCursor: false,
+      onComplete: () => {
+        document.querySelector(`.${aboutStyles.shortAbout}`).style.opacity = 1;
+        setTimeout(() => {
+          document.querySelector(`.${aboutStyles.myStory}`).style.opacity = 1;
+          document.querySelector(
+            `.${aboutStyles.myStoryText}`
+          ).style.opacity = 1;
+        }, 2000);
+      },
+    };
+
+    // elRef refers to the element with class 'typed'
+    typedRef.current = new Typed('.typed', options);
+
+    // Clean up Typed instance on component unmount
+    return () => {
+      if (typedRef.current) {
+        typedRef.current.destroy();
+      }
+    };
+  }, []);
+
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/pages/index.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
+    <>
+      <Header />
+      <main>
+        <section id="About" className="min-h-screen">
+          <div className={aboutStyles.mainContainer}>
+            <div className={aboutStyles.textContent}>
+              <span className={`typed ${aboutStyles.typing}`} />
+              <p className={`${aboutStyles.shortAbout} ${aboutStyles.hidden}`}>
+                A Third year Computer Science student at the University of
+                British Columbia, and a current software engineering intern at
+                KPMG. I'm passionate about software development and problem
+                solving.
+              </p>
+              <h2
+                className={`${aboutStyles.subheader} ${aboutStyles.hidden} ${aboutStyles.myStory}`}
+              >
+                My story
+              </h2>
+              <p className={`${aboutStyles.hidden} ${aboutStyles.myStoryText}`}>
+                From moving to Canada all by myself at the age 15, to starting
+                the programming club at my high school, interning as a financial
+                analyst at a tech start-up, and taking on a software engineer
+                intern position at KPMG I have always been passionate about
+                innovation and eager to take on new challenges.
+                <br />
+                <br />
+                As I look to the future, my aim is to support fellow students
+                who are navigating the tricky waters of professional
+                development. By sharing resources and offering mentorship, I
+                hope to help others build valuable connections and find their
+                footing in their desired careers.
+              </p>
+            </div>
+            <div className={aboutStyles.profileImageContainer}>
+              <img
+                src="../../me.png"
+                alt="Ashkan Yazdi Zadeh"
+                className={aboutStyles.profileImage}
+              />
+            </div>
+          </div>
+        </section>
+        <section id="Work-Experience" className="min-h-screen pt-28">
+          <h2 className="text-center text-5xl font-bold text-white mb-20">
+            Work Experience
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+          <div className="container mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
+              {workExperiences.map((experience, index) => (
+                <CompanyCard
+                  key={index}
+                  imageUrl={experience.imageUrl}
+                  companyName={experience.companyName}
+                  title={experience.title}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+        <section id="Projects" className="min-h-screen"></section>
+      </main>
+      <Footer />
+    </>
+  );
 }

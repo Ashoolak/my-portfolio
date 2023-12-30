@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  color: white;
+  padding-top: 10px;
+  position: sticky;
+  top: 0; /* Stick to the top */
+  background: rgba(41, 41, 41, 0.8); /* Adjust opacity as needed */
+  backdrop-filter: blur(10px); /* Creates the blur effect */
+  z-index: 10; /* Ensures the header is above other content */
+}
+.nav :global(a) {
+  display: inline-block;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.nav :global(a:hover) {
+  background-color: rgb(124, 124, 124);
+}

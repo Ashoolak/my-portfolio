@@ -1,0 +1,71 @@
+.mainContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(
+    100vh - var(--header-height) - var(--footer-height)
+  ); /* Subtract header and footer height from viewport height */
+  padding: 2rem;
+  gap: 2rem; /* Space between text and image */
+}
+
+.profileImageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align image to the start of the cross axis */
+  max-width: 50%;
+  padding-top: var(--header-height); /* Offset for the header */
+}
+
+.profileImage {
+  max-width: 100%; /* Ensures image is responsive and doesn't overflow its container */
+  max-height: 80vh; /* Adjust height as necessary to avoid footer overlap */
+  object-fit: cover; /* Ensures the image covers the area nicely */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.textContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 50%;
+  padding-top: var(--header-height); /* Offset for the header */
+  margin-left: 10%;
+}
+
+.typing {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 1rem; /* Space after the typing effect */
+}
+
+.subheader {
+  font-size: 1.5rem; /* Adjust as needed */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 2s ease-in-out;
+  transition-delay: 1s; /* Will appear after typing effect */
+}
+
+.shortAbout {
+  opacity: 0; /* Initially hidden */
+  transition: opacity 2s ease-in-out;
+  transition-delay: 0.5s; /* Will appear after subheader */
+}
+
+.myStory {
+  opacity: 0; /* Initially hidden */
+  transition: opacity 2s ease-in-out;
+  transition-delay: 0.5s; /* Will appear after short about text */
+  margin-top: 20px; /* Space between sections */
+  font-weight: bold;
+}
+
+.myStoryText {
+  opacity: 0; /* Initially hidden */
+  transition: opacity 2s ease-in-out;
+  transition-delay: 0.5s; /* Will appear after 'myStory' */
+  margin-top: 10px;
+}
