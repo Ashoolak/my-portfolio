@@ -1,24 +1,107 @@
+/* Header.module.css */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  color: white;
-  padding-top: 10px;
-  position: sticky;
-  top: 0;
   background: rgba(22, 22, 22, 0.8);
   backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
   z-index: 10;
 }
-.nav :global(a) {
-  display: inline-block;
-  padding: 10px 15px;
+
+.brandName {
   color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.mobileMenuButton {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: none; /* Hidden by default */
+}
+
+.desktopNav {
+  display: flex;
+  gap: 1rem;
+}
+
+.desktopNav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
   border-radius: 4px;
   transition: background-color 0.3s;
 }
 
-.nav :global(a:hover) {
-  background-color: rgb(124, 124, 124);
+.desktopNav a:hover {
+  background-color: #444;
+}
+
+/* Header.module.css */
+/* ...other styles... */
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .mobileMenuButton {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .mobileNav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 800vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 3rem;
+    z-index: 20;
+    margin-top: 10%;
+  }
+
+  .closeMobileMenu {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  .mobileBrandName {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+
+  .mobileNav a {
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: white;
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
+
+  .desktopNav {
+    display: none; /* Hide desktop navigation on mobile */
+  }
 }

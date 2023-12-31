@@ -88,7 +88,6 @@
     order: 1;
     max-width: 100%; /* Allow image container to take full width */
     align-items: center; /* Center the image container */
-    margin-top: 6rem;
   }
 
   .profileImage {

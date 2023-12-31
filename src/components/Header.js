@@ -1,19 +1,27 @@
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+
 import styles from '../styles/Header.module.css';
 
 export default function Header() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+
   return (
     <header className={styles.header}>
-      <div className={styles.nav}>
-        <a className="text-3xl font-bold" href="/#About">
-          Ashkan YZ
-        </a>
-      </div>
-      <nav className={styles.nav}>
-        <a href="/#Work-Experience">Work Experience</a>
-        <a href="/#Projects">Projects</a>
+      <a className={styles.brandName} href="#About">
+        Ashkan YZ
+      </a>
+      <button className={styles.mobileMenuButton} onClick={toggleMobileMenu}>
+        <FontAwesomeIcon icon={isMobileMenuOpen ? faTimes : faBars} size="lg" />
+      </button>
+      <nav className={isMobileMenuOpen ? styles.mobileNav : styles.desktopNav}>
+        <a href="#Work-Experience">Work Experience</a>
+        <a href="#Projects">Projects</a>
         <a href="../Resume.pdf" target="_blank" rel="noopener noreferrer">
           Resume
         </a>
