@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
 import Header from '../components/Header';
-import Footer from '../components/Footer';
 import aboutStyles from '../styles/Home.module.css';
 import CompanyCard from '@/components/CompanyCard';
 import ProjectCard from '@/components/ProjectCard';
@@ -122,7 +121,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 }

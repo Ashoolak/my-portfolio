@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import workExperiences from '../../data/workExperience'; // Adjust the import path as needed
 
 export async function getStaticPaths() {
@@ -35,27 +34,26 @@ export default function WorkExperienceDetails({ experience }) {
       <Header />
       <main className="min-h-screen p-4 bg-gradient-to-r from-black to-gray-800 text-white">
         <div className="container mx-auto p-4">
-          <div className="bg-gray-800 bg-opacity-90 py-12 px-10 rounded-lg shadow-xl transform transition duration-500 hover:scale-105">
-            <div className="flex flex-col md:flex-row items-center">
-              <div className="w-56 h-44 mb-4 md:mb-0 md:mr-16">
-                {' '}
-                {/* Slightly bigger dimensions for the logo */}
+          <div className="bg-gray-800 bg-opacity-90 py-6 sm:py-12 px-4 sm:px-10 rounded-lg shadow-xl transform transition duration-500 hover:scale-105">
+            <div className="flex flex-col sm:flex-row items-center text-center sm:text-left">
+              <div className="w-32 h-32 sm:w-56 sm:h-56 mb-4 sm:mb-0 sm:mr-8">
                 <Image
                   src={experience.imageUrl}
                   alt={`${experience.companyName} logo`}
-                  width={240} // Adjusted width for the logo
-                  height={240} // Adjusted height for the logo
-                  className="shadow-lg bg-white p-4 rounded-md" // Added background and padding to emphasize the logo
+                  width={224}
+                  height={224}
+                  className="shadow-lg bg-white p-2 rounded-md object-contain"
                 />
               </div>
               <div className="flex-grow">
                 <h1 className="text-3xl font-bold mb-2">
                   {experience.companyName}
                 </h1>
-                <p className="text-xl italic">{experience.title}</p>
-                <p className="mb-4">
-                  {experience.location} - {experience.period}
-                </p>
+                <p className="text-xl italic mb-4">{experience.title}</p>
+                <div className="flex flex-col sm:flex-row justify-between mb-4 text-gray-400">
+                  <p>{experience.location}</p>
+                  <p className="italic">{experience.period}</p>
+                </div>
                 <div className="space-y-2">
                   {bulletPoints.map((point, index) => (
                     <div key={index} className="flex items-center">
@@ -68,9 +66,9 @@ export default function WorkExperienceDetails({ experience }) {
                 </div>
               </div>
             </div>
-            <div className="mt-6">
+            <div className="mt-4 sm:mt-6">
               <h2 className="text-2xl font-semibold mb-3">Skills</h2>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
                 {experience.skills.map((skill, index) => (
                   <span
                     key={index}
@@ -84,7 +82,6 @@ export default function WorkExperienceDetails({ experience }) {
           </div>
         </div>
       </main>
-      <Footer />
     </>
   );
 }

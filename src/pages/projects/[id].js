@@ -2,7 +2,6 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import projects from '../../data/projects'; // Adjust the import path as needed
 
 export async function getStaticPaths() {
@@ -103,7 +102,6 @@ export default function ProjectDetails({ project }) {
           </div>
         </div>
       </main>
-      <Footer />
     </>
   );
 }
