@@ -20,8 +20,8 @@ export default function Header() {
         <FontAwesomeIcon icon={isMobileMenuOpen ? faTimes : faBars} size="lg" />
       </button>
       <nav className={isMobileMenuOpen ? styles.mobileNav : styles.desktopNav}>
-        <a href="#Work-Experience">Work Experience</a>
-        <a href="#Projects">Projects</a>
+        <a href="/#Work-Experience">Work Experience</a>
+        <a href="/#Projects">Projects</a>
         <a href="../Resume.pdf" target="_blank" rel="noopener noreferrer">
           Resume
         </a>
