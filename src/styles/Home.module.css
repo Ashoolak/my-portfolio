@@ -4,7 +4,7 @@
   justify-content: center;
   min-height: calc(100vh - var(--header-height));
   padding: 2rem;
-  gap: 2rem; /* Space between text and image */
+  gap: 2rem;
 }
 
 .profileImageContainer {
@@ -51,6 +51,16 @@
   opacity: 0; /* Initially hidden */
   transition: opacity 2s ease-in-out;
   transition-delay: 0.5s; /* Will appear after subheader */
+  list-style: inside;
+  padding-left: 1rem;
+  text-align: left;
+}
+
+.shortAbout li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ccc;
 }
 
 .myStory {
@@ -66,4 +76,45 @@
   transition: opacity 2s ease-in-out;
   transition-delay: 0.5s; /* Will appear after 'myStory' */
   margin-top: 10px;
+}
+
+/* Add media query for mobile screens */
+@media (max-width: 768px) {
+  .mainContainer {
+    flex-direction: column; /* Stack children vertically */
+  }
+
+  .profileImageContainer {
+    order: 1;
+    max-width: 100%; /* Allow image container to take full width */
+    align-items: center; /* Center the image container */
+    margin-top: 6rem;
+  }
+
+  .profileImage {
+    max-width: 50%; /* Reduce the size of the image */
+  }
+
+  .textContent {
+    order: 2;
+    align-items: center; /* Center the text content */
+    max-width: 100%; /* Allow text container to take full width */
+    margin-left: 0; /* Remove margin-left */
+    margin-top: 1rem; /* Add a little margin-top for spacing */
+    padding: 0 2rem; /* Increase side padding for better readability */
+  }
+
+  .typing {
+    font-size: 30px; /* Reduce the size of the typed text */
+    margin-bottom: 2rem;
+  }
+
+  .shortAbout,
+  .subheader,
+  .myStory,
+  .myStoryText {
+    font-size: 1.125rem; /* Slightly larger font size for better readability */
+    padding: 0 1rem; /* Consistent padding with .textContent */
+    color: #ccc; /* Adjust text color if necessary */
+  }
 }

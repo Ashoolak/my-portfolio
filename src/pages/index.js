@@ -47,12 +47,14 @@ export default function Home() {
           <div className={aboutStyles.mainContainer}>
             <div className={aboutStyles.textContent}>
               <span className={`typed ${aboutStyles.typing}`} />
-              <p className={`${aboutStyles.shortAbout} ${aboutStyles.hidden}`}>
-                A Third year Computer Science student at the University of
-                British Columbia, and a current software engineering intern at
-                KPMG. I'm passionate about software development and problem
-                solving.
-              </p>
+              <ul className={`${aboutStyles.shortAbout} ${aboutStyles.hidden}`}>
+                <li>3rd year Computer Science student at the UBC</li>
+                <li>Software Engineering Intern at KPMG</li>
+                <li>Software Engineer at UBC Launchpad</li>
+                <li>
+                  Passionate about software development and problem solving
+                </li>
+              </ul>
               <h2
                 className={`${aboutStyles.subheader} ${aboutStyles.hidden} ${aboutStyles.myStory}`}
               >
