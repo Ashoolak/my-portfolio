@@ -92,6 +92,7 @@ export default function Home() {
               {workExperiences.map((experience, index) => (
                 <CompanyCard
                   key={index}
+                  id={experience.id}
                   imageUrl={experience.imageUrl}
                   companyName={experience.companyName}
                   title={experience.title}

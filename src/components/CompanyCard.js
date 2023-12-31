@@ -1,12 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function CompanyCard({ imageUrl, companyName, title }) {
-  const slug = `${companyName}-${title}`.toLowerCase().replace(/\s+/g, '-');
-
+export default function CompanyCard({ imageUrl, companyName, title, id }) {
   return (
     <Link
-      href={`/work-experience/${slug}`}
+      href={`/work-experience/${id}`}
       passHrefn
       className="card group cursor-pointer overflow-hidden relative border rounded-lg shadow-xl transition-shadow duration-300 ease-in-out transform hover:-translate-y-2 bg-black bg-opacity-80 hover:bg-opacity-90"
     >
