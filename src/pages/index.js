@@ -18,6 +18,8 @@ export default function Home() {
       smartBackspace: true,
       showCursor: false,
       onComplete: () => {
+        // Assuming you want to fade in elements after typing is complete
+        // Adjust the class names according to your actual CSS
         document.querySelector(`.${aboutStyles.shortAbout}`).style.opacity = 1;
         setTimeout(() => {
           document.querySelector(`.${aboutStyles.myStory}`).style.opacity = 1;
@@ -28,10 +30,8 @@ export default function Home() {
       },
     };
 
-    // elRef refers to the element with class 'typed'
     typedRef.current = new Typed('.typed', options);
 
-    // Clean up Typed instance on component unmount
     return () => {
       if (typedRef.current) {
         typedRef.current.destroy();

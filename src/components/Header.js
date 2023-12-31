@@ -13,7 +13,7 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <a className={styles.brandName} href="#About">
+      <a className={styles.brandName} href="/#About">
         Ashkan YZ
       </a>
       <button className={styles.mobileMenuButton} onClick={toggleMobileMenu}>
