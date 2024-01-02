@@ -30,6 +30,7 @@ export default function ProjectDetails({ project }) {
   const [selectedImage, setSelectedImage] = useState(
     project?.images?.[0] || null
   );
+  const [view, setView] = useState('motivation'); // 'motivation' or 'achievements'
 
   // Set the selected image when the project data changes
   useEffect(() => {
@@ -90,15 +91,51 @@ export default function ProjectDetails({ project }) {
                 </li>
               ))}
             </ul>
-            <h2 className="text-2xl font-semibold mb-2">
-              Actions / Achievements
-            </h2>
-            {longDescriptionParagraphs.map((paragraph, index) => (
-              <p key={index} className="text-gray-400 mb-4">
-                - {paragraph}
-                {index < longDescriptionParagraphs.length - 1 && <br />}
-              </p>
-            ))}
+            {/* Project Details */}
+            <div className="flex justify-center lg:justify-start mb-6 mt-8">
+              <button
+                onClick={() => setView('motivation')}
+                className={`px-4 py-2 mx-2 text-lg rounded-md outline-1 ${
+                  view === 'motivation'
+                    ? 'bg-gray-500'
+                    : 'text-white bg-transparent hover:bg-gray-700'
+                } transition duration-300 ease-in-out focus:outline-none`}
+              >
+                Motivation
+              </button>
+              <button
+                onClick={() => setView('achievements')}
+                className={`px-4 py-2 mx-2 text-lg rounded-md outline-1 outline-purple-900 ${
+                  view === 'achievements'
+                    ? 'bg-gray-500'
+                    : 'text-white bg-transparent hover:bg-gray-700'
+                } transition duration-300 ease-in-out focus:outline-none`}
+              >
+                Achievements
+              </button>
+            </div>
+            <div className="text-gray-400 w-full">
+              {/* Dynamic Content Based on Selection */}
+              {view === 'motivation' && (
+                <div className="text-white mb-6">
+                  <h2 className="text-2xl font-semibold mb-4">Motivation</h2>
+                  <p>{project.motivation}</p>
+                </div>
+              )}
+              {view === 'achievements' && (
+                <div className="text-white">
+                  <h2 className="text-2xl font-semibold mb-4">
+                    Actions / Achievements
+                  </h2>
+                  {longDescriptionParagraphs.map((paragraph, index) => (
+                    <p key={index} className="mb-4">
+                      - {paragraph}
+                      {index < longDescriptionParagraphs.length - 1 && <br />}
+                    </p>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </main>
