@@ -41,7 +41,7 @@ const projects = [
   },
   {
     id: 3,
-    title: 'Innovent Hackathon',
+    title: 'Ship Hall Cleaning Robot',
     techStack: ['Arduino IDE', 'C++', 'Sensors'],
     shortDescription:
       'Designed an autonomous, hydroelectric-powered robot for ship cleaning, reducing fuel consumption by 40% and winning Best Product Design at InnoVent Competition.',
@@ -55,6 +55,32 @@ const projects = [
       '/projects/Innovent1.png',
       '/projects/Innovent2.png',
     ],
+  },
+  {
+    id: 4,
+    title: 'Bank Account Simulation',
+    techStack: [
+      'Java',
+      'IntelliJ IDE',
+      'Swing Library',
+      'JSON',
+      'JUnit',
+      'Object-Oriented Programming (OOP)',
+    ],
+    shortDescription:
+      'Created a Java-based banking simulation for my CPSC 210 capstone, employing OOP principles and Swing GUI, with a focus on efficient data management and user interaction.',
+    longDescription:
+      'Developed a full-stack banking simulation in Java using Object-Oriented Programming (OOP) concepts such as polymorphism and inheritance for different types of bank card objects.;Implemented JSON for local data storage and crafted an interactive GUI with Swing for user interactions.;Achieved 100% code coverage, resulting in a streamlined debugging process, and cutting debugging time by 50%.',
+    motivation:
+      'My passion for business, particularly the intricacies of financial transactions and the algorithms behind them, inspired me to develop this project for my CPSC 210 capstone. I was intrigued by the mathematical aspects and the flow of money in banking systems. This simulation was an opportunity to delve into these interests, applying Object-Oriented Programming to create a realistic banking environment and tackle the challenges of efficient data handling and user interaction.',
+    imageUrl: '/projects/BankAccount1.png',
+    images: [
+      '/projects/BankAccount1.png',
+      '/projects/BankAccount2.png',
+      '/projects/BankAccount3.png',
+      '/projects/BankAccount4.png',
+    ],
+    github: 'https://github.com/Ashoolak/bankAccount',
   },
 ];
 

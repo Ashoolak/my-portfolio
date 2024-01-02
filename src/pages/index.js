@@ -10,6 +10,7 @@ import projects from '@/data/projects';
 export default function Home() {
   const myStoryRef = useRef(null);
   const myStoryTextRef = useRef(null);
+  const typedRef = useRef(null);
 
   useEffect(() => {
     const options = {
