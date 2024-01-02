@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Header from '../../components/Header';
 import projects from '../../data/projects'; // Adjust the import path as needed
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 export async function getStaticPaths() {
   // Generate the paths for static generation based on project IDs
@@ -82,9 +84,32 @@ export default function ProjectDetails({ project }) {
           {/* Project Details */}
           <div className="flex-1 mt-12 lg:mt-16 lg:mr-8">
             <h1 className="text-4xl font-bold mb-4">{project.title}</h1>
-            <p className="text-gray-400 mb-4">
-              {linkify(project.shortDescription)}
-            </p>
+            <p className="text-gray-400 mb-4">{project.shortDescription}</p>
+            <div className="flex space-x-4 mb-4">
+              {/* GitHub Button */}
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-gray-400 underline mb-2"
+                >
+                  <FontAwesomeIcon icon={faGithub} size="lg" />
+                </a>
+              )}
+
+              {/* Visit Website Button */}
+              {project.link && (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-gray-400 underline"
+                >
+                  Visit Website
+                </a>
+              )}
+            </div>
             <h2 className="text-2xl font-semibold mb-2">Tech Stack</h2>
             <ul className="list-disc pl-5 mb-4">
               {project.techStack.map((tech, index) => (
@@ -143,26 +168,4 @@ export default function ProjectDetails({ project }) {
       </main>
     </>
   );
-}
-
-function linkify(text) {
-  const urlRegex =
-    /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gi;
-  return text.split(' ').map((word, i) => {
-    if (urlRegex.test(word)) {
-      return (
-        <a
-          key={i}
-          href={word}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-500 hover:underline"
-        >
-          {word}
-        </a>
-      );
-    } else {
-      return word + ' ';
-    }
-  });
 }
