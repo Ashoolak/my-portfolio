@@ -8,7 +8,8 @@ import workExperiences from '@/data/workExperience';
 import projects from '@/data/projects';
 
 export default function Home() {
-  const typedRef = useRef(null);
+  const myStoryRef = useRef(null);
+  const myStoryTextRef = useRef(null);
 
   useEffect(() => {
     const options = {
@@ -18,14 +19,13 @@ export default function Home() {
       smartBackspace: true,
       showCursor: false,
       onComplete: () => {
-        // Assuming you want to fade in elements after typing is complete
-        // Adjust the class names according to your actual CSS
-        document.querySelector(`.${aboutStyles.shortAbout}`).style.opacity = 1;
+        if (myStoryRef.current) {
+          myStoryRef.current.style.opacity = 1;
+        }
         setTimeout(() => {
-          document.querySelector(`.${aboutStyles.myStory}`).style.opacity = 1;
-          document.querySelector(
-            `.${aboutStyles.myStoryText}`
-          ).style.opacity = 1;
+          if (myStoryTextRef.current) {
+            myStoryTextRef.current.style.opacity = 1;
+          }
         }, 2000);
       },
     };
@@ -56,11 +56,15 @@ export default function Home() {
                 </li>
               </ul>
               <h2
+                ref={myStoryRef}
                 className={`${aboutStyles.subheader} ${aboutStyles.hidden} ${aboutStyles.myStory}`}
               >
                 My story
               </h2>
-              <p className={`${aboutStyles.hidden} ${aboutStyles.myStoryText}`}>
+              <p
+                ref={myStoryTextRef}
+                className={`${aboutStyles.hidden} ${aboutStyles.myStoryText}`}
+              >
                 From moving to Canada all by myself at the age 15, to starting
                 the programming club at my high school, interning as a financial
                 analyst at a tech start-up, and taking on a software engineer

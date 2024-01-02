@@ -39,6 +39,23 @@ const projects = [
     link: 'https://www.students.cs.ubc.ca/~ashoolak/initial.php',
     github: 'https://github.com/Ashoolak/linkedInNetworkingDatabase',
   },
+  {
+    id: 3,
+    title: 'Innovent Hackathon',
+    techStack: ['Arduino IDE', 'C++', 'Sensors'],
+    shortDescription:
+      'Designed an autonomous, hydroelectric-powered robot for ship cleaning, reducing fuel consumption by 40% and winning Best Product Design at InnoVent Competition.',
+    longDescription:
+      'Engineered an autonomous robot for ship hull cleaning, resulting in a potential 40% fuel savings.;Implemented BFS algorithm for efficient pathfinding and programmed sensors to detect ship edges and organisms with temperatures over 18°C.;Secured Best Product Design award and achieved second place in the Sustainability division.',
+    motivation:
+      'Biofouling is a prevanlent issue within our current society where organisms get attached to the hulls of ships and create drag, significantly increase fuel consumption rates and costs as well as annual CO2 emissions and rapid biodiversity reduction. Being in the sustainability devision of the Innovent competition we decided to tackle this issue!',
+    imageUrl: '/projects/Innovent3.jpg',
+    images: [
+      '/projects/Innovent3.jpg',
+      '/projects/Innovent1.png',
+      '/projects/Innovent2.png',
+    ],
+  },
 ];
 
 export default projects;
