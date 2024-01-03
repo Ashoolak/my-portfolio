@@ -55,10 +55,21 @@ const workExperiences = [
   {
     id: 4,
     companyName: 'Innovenium Technologies Inc.',
+    period: 'May 2022 - August 2022',
     location: 'Vancouver, BC',
     title: 'Financial Analyst',
-    description: '',
+    description:
+      "Secured investments via strategic outreach and persuasive pitch deck; allocated funds for multiple business functions.;Employed SWOT analysis for pitch deck and utilized zero-based budgeting for effective fund management.;Raised over $20,000 in three months, fueling the startup's main financial framework.",
     imageUrl: '/companies/Innovenium.jpeg',
+    skills: [
+      'SWOT Analysis',
+      'Fund Raising',
+      'Teamwork',
+      'Time-management',
+      'Networking',
+      'Pitch Deck',
+      'Zero-Based Budgeting',
+    ],
   },
 ];
 
