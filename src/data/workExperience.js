@@ -26,7 +26,7 @@ const workExperiences = [
     location: 'Vancouver, BC',
     title: 'Web Developer',
     description:
-      'Developed a full-stack e-commerce site for UBC health and wellness utilizing React.js (Next.js 13), MongoDB, and EmailJS for enhanced user experience and real-time transaction confirmations.;Implemented Python-based web scraping with Selenium, reducing data collection time from 500 minutes to less than 10 minutes for 500+ websites.;Designed a Python script to analyze and visualize data with graphs revealing a 37% increase in time spent on the website for users who declined cookie banners.;Employed Tailwind CSS for an intuitive UI and enabled user-specific content retrieval using URL query parameters.',
+      'Developed a full-stack e-commerce site for UBC health and wellness utilizing React.js (Next.js 13), MongoDB, and EmailJS for enhanced user experience and real-time transaction confirmations.;Implemented Python-based web scraping with Selenium, reducing data collection time from 500 minutes to less than 10 minutes for 500+ websites.;Designed a Python script to analyze and visualize data with graphs revealing a 37% increase in time spent on the website for users who declined cookie banners.;Employed Tailwind CSS for an intuitive UI and enabled user-specific content retrieval using URL query parameters.;www.',
     imageUrl: '/companies/UBC.png',
     skills: [
       'React.js',
@@ -43,6 +43,17 @@ const workExperiences = [
   },
   {
     id: 3,
+    companyName: 'UBC Launchpad',
+    period: 'September 2023 - Present',
+    location: 'Vancovuer, BC - Remote',
+    title: 'Software Engineer',
+    description:
+      'Contributed to the migration of EpiLog, a seizure tracking app, from Flutter to React Native, focusing on performance enhancements and UI improvements.;Participated in optimizing app features during the migration, ensuring efficient functionality and user engagement.;Elevated the user interface of EpiLog in the React Native platform, achieving a more efficient user experience',
+    imageUrl: '/companies/Launchpad.png',
+    skills: ['Reach Native', 'Flutter', 'Express JS', 'Firebase', 'Teamwork'],
+  },
+  {
+    id: 4,
     companyName: 'Innovenium Technologies Inc.',
     location: 'Vancouver, BC',
     title: 'Financial Analyst',

@@ -82,6 +82,20 @@ const projects = [
     ],
     github: 'https://github.com/Ashoolak/bankAccount',
   },
+  {
+    id: 5,
+    title: 'Web Screenshot Automation',
+    techStack: ['Python', 'Selenium'],
+    shortDescription:
+      'Implemented Python-based web scraping with Selenium, reducing data collection time from 500 minutes to less than 10 minutes for 500+ websites.',
+    longDescription:
+      'Engineered a web scraping tool using Python and Selenium, automating the process of capturing screenshots from over 500 company websites, significantly enhancing data collection efficiency.;Reduced manual screenshot capture time dramatically, from 500 minutes to less than 10 minutes, demonstrating effective automation and time management.;Tailored automation scripts to accommodate various website layouts and structures, ensuring a high success rate in data capture and reliability of the tool.',
+    motivation:
+      "While working as a web developer at UBC, I encountered a practical problem: four research assistants were spending an enormous amount of time manually visiting and capturing screenshots of over 500 websites. This task, assigned by my manager who's also a professor, was crucial for their research but inefficient and tedious. Seeing their struggle, I realized I could make a difference. Using my skills in Python and Selenium, I decided to develop an automated web scraping tool. This wasn't just about coding; it was about finding a smart solution to a real-world problem and freeing up valuable time for the research team to focus on more critical tasks.",
+    imageUrl: '/projects/SSAutomation.png',
+    images: ['/projects/SSAutomation.png'],
+    github: 'https://github.com/Ashoolak/WebScreenshotAutomation',
+  },
 ];
 
 export default projects;
