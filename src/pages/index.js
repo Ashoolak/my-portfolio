@@ -9,6 +9,7 @@ import projects from '@/data/projects';
 
 export default function Home() {
   const myStoryRef = useRef(null);
+  const shortAboutRef = useRef(null);
   const myStoryTextRef = useRef(null);
   const typedRef = useRef(null);
 
@@ -22,6 +23,9 @@ export default function Home() {
       onComplete: () => {
         if (myStoryRef.current) {
           myStoryRef.current.style.opacity = 1;
+        }
+        if (shortAboutRef.current) {
+          shortAboutRef.current.style.opacity = 1;
         }
         setTimeout(() => {
           if (myStoryTextRef.current) {
@@ -48,7 +52,10 @@ export default function Home() {
           <div className={aboutStyles.mainContainer}>
             <div className={aboutStyles.textContent}>
               <span className={`typed ${aboutStyles.typing}`} />
-              <ul className={`${aboutStyles.shortAbout} ${aboutStyles.hidden}`}>
+              <ul
+                className={`${aboutStyles.shortAbout} ${aboutStyles.hidden}`}
+                ref={shortAboutRef}
+              >
                 <li>3rd year Computer Science student at the UBC</li>
                 <li>Software Engineering Intern at KPMG</li>
                 <li>Software Engineer at UBC Launchpad</li>
