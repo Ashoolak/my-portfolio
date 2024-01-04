@@ -26,7 +26,7 @@ const workExperiences = [
     location: 'Vancouver, BC',
     title: 'Web Developer',
     description:
-      'Developed a full-stack e-commerce site for UBC health and wellness utilizing React.js (Next.js 13), MongoDB, and EmailJS for enhanced user experience and real-time transaction confirmations.;Implemented Python-based web scraping with Selenium, reducing data collection time from 500 minutes to less than 10 minutes for 500+ websites.;Designed a Python script to analyze and visualize data with graphs revealing a 37% increase in time spent on the website for users who declined cookie banners.;Employed Tailwind CSS for an intuitive UI and enabled user-specific content retrieval using URL query parameters.;www.',
+      'Developed a full-stack e-commerce site for UBC health and wellness utilizing React.js (Next.js 13), MongoDB, and EmailJS for enhanced user experience and real-time transaction confirmations.;Implemented Python-based web scraping with Selenium, reducing data collection time from 500 minutes to less than 10 minutes for 500+ websites.;Designed a Python script to analyze and visualize data with graphs revealing a 37% increase in time spent on the website for users who declined cookie banners.;Employed Tailwind CSS for an intuitive UI and enabled user-specific content retrieval using URL query parameters.;Website: https://www.wellnesscentreshop.ca/',
     imageUrl: '/companies/UBC.png',
     skills: [
       'React.js',
