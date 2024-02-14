@@ -3,13 +3,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 import styles from '../styles/Header.module.css';
 
 export default function Header() {
+  config.autoAddCss = false;
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+
+  const closeSandwichMenu = () => setIsMobileMenuOpen(false);
 
   // Define a new function that both toggles the menu and allows for navigation
   const handleLinkClick = () => {
@@ -18,11 +23,19 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <a className={styles.brandName} href="/#About">
+      <a
+        className={styles.brandName}
+        href="/#About"
+        onClick={closeSandwichMenu}
+      >
         Ashkan YZ
       </a>
       <button className={styles.mobileMenuButton} onClick={toggleMobileMenu}>
-        <FontAwesomeIcon icon={isMobileMenuOpen ? faTimes : faBars} size="lg" />
+        <FontAwesomeIcon
+          icon={isMobileMenuOpen ? faTimes : faBars}
+          size="lg"
+          style={{ color: 'white' }}
+        />
       </button>
       <nav className={isMobileMenuOpen ? styles.mobileNav : styles.desktopNav}>
         {/* Add onClick={handleLinkClick} to each link */}
@@ -46,7 +59,11 @@ export default function Header() {
           rel="noopener noreferrer"
           onClick={handleLinkClick}
         >
-          <FontAwesomeIcon icon={faLinkedin} size="2x" />
+          <FontAwesomeIcon
+            icon={faLinkedin}
+            size="2x"
+            style={{ color: 'white' }}
+          />
         </a>
         <a
           href="https://github.com/Ashoolak"
@@ -54,10 +71,18 @@ export default function Header() {
           rel="noopener noreferrer"
           onClick={handleLinkClick}
         >
-          <FontAwesomeIcon icon={faGithub} size="2x" />
+          <FontAwesomeIcon
+            icon={faGithub}
+            size="2x"
+            style={{ color: 'white' }}
+          />
         </a>
         <a href="mailto:ashkanyz70@gmail.com" onClick={handleLinkClick}>
-          <FontAwesomeIcon icon={faEnvelope} size="2x" />
+          <FontAwesomeIcon
+            icon={faEnvelope}
+            size="2x"
+            style={{ color: 'white' }}
+          />
         </a>
       </nav>
     </header>
