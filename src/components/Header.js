@@ -32,10 +32,14 @@ export default function Header() {
       </button>
       <nav className={isMobileMenuOpen ? styles.mobileNav : styles.desktopNav}>
         {/* Add onClick={handleLinkClick} to each link */}
-        <a href="/#Work-Experience" onClick={handleLinkClick} className="2xl">
+        <a
+          href="/#Work-Experience"
+          onClick={handleLinkClick}
+          className="text-xl"
+        >
           Work Experience
         </a>
-        <a href="/#Projects" onClick={handleLinkClick} className="2xl">
+        <a href="/#Projects" onClick={handleLinkClick} className="text-xl">
           Projects
         </a>
         <a
@@ -43,7 +47,7 @@ export default function Header() {
           target="_blank"
           rel="noopener noreferrer"
           onClick={handleLinkClick}
-          className="2xl"
+          className="text-xl"
         >
           Resume
         </a>
