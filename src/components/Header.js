@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import {
+  faLinkedin,
+  faGithub,
+  faEnvelope,
+} from '@fortawesome/free-brands-svg-icons'; // Note that faEnvelope is actually from @fortawesome/free-regular-svg-icons or @fortawesome/free-solid-svg-icons
 
 import styles from '../styles/Header.module.css';
 

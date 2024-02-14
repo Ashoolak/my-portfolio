@@ -6,6 +6,7 @@ import CompanyCard from '@/components/CompanyCard';
 import ProjectCard from '@/components/ProjectCard';
 import workExperiences from '@/data/workExperience';
 import projects from '@/data/projects';
+import Chatbot from '@/components/ChatBot';
 
 export default function Home() {
   const myStoryRef = useRef(null);
@@ -134,6 +135,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <Chatbot />
+        
       </main>
     </>
   );
