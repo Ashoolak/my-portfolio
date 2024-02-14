@@ -28,7 +28,7 @@
 
 .desktopNav {
   display: flex;
-  gap: 1rem;
+  gap: 5px;
 }
 
 .desktopNav a {
