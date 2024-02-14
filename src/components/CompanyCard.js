@@ -5,7 +5,7 @@ export default function CompanyCard({ imageUrl, companyName, title, id }) {
   return (
     <Link
       href={`/work-experience/${id}`}
-      passHrefn
+      passHref
       className="card group cursor-pointer overflow-hidden relative border rounded-lg shadow-xl transition-shadow duration-300 ease-in-out transform hover:-translate-y-2 bg-black bg-opacity-80 hover:bg-opacity-90"
     >
       <div className="relative w-full h-48 bg-white">
