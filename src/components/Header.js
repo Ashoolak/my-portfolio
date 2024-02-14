@@ -11,6 +11,8 @@ export default function Header() {
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
+  const closeSandwichMenu = () => setIsMobileMenuOpen(false);
+
   // Define a new function that both toggles the menu and allows for navigation
   const handleLinkClick = () => {
     setIsMobileMenuOpen(false); // This ensures the menu closes upon clicking a link
@@ -18,7 +20,11 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <a className={styles.brandName} href="/#About">
+      <a
+        className={styles.brandName}
+        href="/#About"
+        onClick={closeSandwichMenu}
+      >
         Ashkan YZ
       </a>
       <button className={styles.mobileMenuButton} onClick={toggleMobileMenu}>
