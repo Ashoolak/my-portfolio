@@ -65,7 +65,7 @@ export default function Home() {
               </ul>
               <h2
                 ref={myStoryRef}
-                className={`${aboutStyles.subheader} ${aboutStyles.hidden} ${aboutStyles.myStory}`}
+                className={`${aboutStyles.subheader} ${aboutStyles.hidden}`}
               >
                 My story
               </h2>
@@ -96,8 +96,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="Work-Experience" className="min-h-screen pt-28">
-          <h2 className="text-center text-5xl font-bold text-white mb-20">
+        <section id="Work-Experience" className="min-h-screen pt-16 md:pt-24">
+          <h2 className="text-center md:text-5xl text-4xl font-bold text-white mb-10 md:pt-0 pt-8">
             Work Experience
           </h2>
           <div className="container mx-auto">
@@ -115,9 +115,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="Projects" className="min-h-screen pt-28">
+        <section id="Projects" className="min-h-screen pt-16 md:pt-18">
           <div className="container mx-auto px-4 py-8">
-            <h2 className="text-5xl font-bold text-white mb-20 text-center">
+            <h2 className="md:text-5xl text-4xl font-bold text-white mb-10 text-center">
               Projects
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
