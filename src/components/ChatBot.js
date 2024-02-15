@@ -147,11 +147,7 @@ export default function Chatbot() {
           }
         `}</style>
       </Head>
-      <div
-        className={`chat-btn ${spin ? 'spin' : ''}`}
-        onClick={toggleChat}
-        onAnimationEnd={() => setSpin(false)}
-      >
+      <div className={`chat-btn ${spin ? 'spin' : ''}`} onClick={toggleChat}>
         {isOpen ? <FaTimes size="24" /> : <FaAngleUp size="24" />}
       </div>
       {isOpen && (
