@@ -45,6 +45,8 @@
   opacity: 0; /* Initially hidden */
   transition: opacity 2s ease-in-out;
   transition-delay: 1s; /* Will appear after typing effect */
+  padding-top: 20px;
+  font-weight: bold;
 }
 
 .shortAbout {
@@ -63,14 +65,6 @@
   color: #ccc;
 }
 
-.myStory {
-  opacity: 0; /* Initially hidden */
-  transition: opacity 2s ease-in-out;
-  transition-delay: 0.5s; /* Will appear after short about text */
-  margin-top: 20px; /* Space between sections */
-  font-weight: bold;
-}
-
 .myStoryText {
   opacity: 0; /* Initially hidden */
   transition: opacity 2s ease-in-out;
@@ -82,6 +76,8 @@
 @media (max-width: 768px) {
   .mainContainer {
     flex-direction: column; /* Stack children vertically */
+    padding-right: 1rem; /* Reduce padding for better mobile experience */
+    padding-left: 0px;
   }
 
   .profileImageContainer {
@@ -98,21 +94,25 @@
     order: 2;
     align-items: center; /* Center the text content */
     max-width: 100%; /* Allow text container to take full width */
-    margin-left: 0; /* Remove margin-left */
-    margin-top: 1rem; /* Add a little margin-top for spacing */
-    padding: 0 2rem; /* Increase side padding for better readability */
+    margin-top: -1rem; /* Add a little margin-top for spacing */
   }
 
   .typing {
-    font-size: 30px; /* Reduce the size of the typed text */
-    margin-bottom: 2rem;
+    font-size: 28px; /* Reduce the size of the typed text */
+    margin-bottom: 1rem;
+  }
+
+  .subheader {
+    font-size: 25px;
+    padding-top: 2rem; /* Consistent padding with .textContent */
+    padding-bottom: 5px;
+    color: #ffffff; /* Adjust text color if necessary */
+    font-weight: bold;
   }
 
   .shortAbout,
-  .subheader,
-  .myStory,
   .myStoryText {
-    font-size: 1.125rem; /* Slightly larger font size for better readability */
+    font-size: 16px; /* Slightly larger font size for better readability */
     padding: 0 1rem; /* Consistent padding with .textContent */
     color: #ccc; /* Adjust text color if necessary */
   }
