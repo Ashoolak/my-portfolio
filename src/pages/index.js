@@ -59,7 +59,7 @@ export default function Home() {
               >
                 <li>3rd year Computer Science student at the UBC</li>
                 <li>Software Engineering Intern at KPMG</li>
-                <li>Software Engineer at UBC Launchpad</li>
+                <li>Software Developer at UBC Launchpad</li>
                 <li>
                   Passionate about software development and problem solving
                 </li>
@@ -81,11 +81,13 @@ export default function Home() {
                 innovation and eager to take on new challenges.
                 <br />
                 <br />
-                As I look to the future, my aim is to support fellow students
-                who are navigating the tricky waters of professional
-                development. By sharing resources and offering mentorship, I
-                hope to help others build valuable connections and find their
-                footing in their desired careers.
+                Looking ahead, I'm excited to put my computer science and
+                programming skills to good use by developing practical solutions
+                for individuals and businesses. More than that, I want to lend a
+                helping hand to young people who are just beginning their
+                careers. Whether it's through mentoring or simply sharing what
+                I've learned, my goal is to make the journey a bit easier for
+                those who are just starting out.
               </p>
             </div>
             <div className={aboutStyles.profileImageContainer}>
