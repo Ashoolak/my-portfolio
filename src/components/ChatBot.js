@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { FaPaperPlane, FaTimes, FaAngleUp, FaAngleDown } from 'react-icons/fa'; // For enhanced icons
 
 export default function Chatbot() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const [messages, setMessages] = useState([]);
   const [isTyping, setIsTyping] = useState(false);
   const inputRef = useRef(null);
