@@ -6,6 +6,7 @@ import CompanyCard from '@/components/CompanyCard';
 import ProjectCard from '@/components/ProjectCard';
 import workExperiences from '@/data/workExperience';
 import projects from '@/data/projects';
+import Divider from '@/components/Divider';
 
 export default function Home() {
   const myStoryRef = useRef(null);
@@ -98,7 +99,11 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="Work-Experience" className="min-h-screen pt-16 md:pt-24">
+        <Divider />
+        <section
+          id="Work-Experience"
+          className="min-h-screen pt-8 md:pt-24 mb-12"
+        >
           <h2 className="text-center md:text-5xl text-4xl font-bold text-white mb-10 md:pt-0 pt-8">
             Work Experience
           </h2>
@@ -116,8 +121,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        <section id="Projects" className="min-h-screen pt-16 md:pt-18">
+        <Divider />
+        <section id="Projects" className="min-h-screen pt-8 md:pt-18">
           <div className="container mx-auto px-4 py-8">
             <h2 className="md:text-5xl text-4xl font-bold text-white mb-10 text-center">
               Projects
