@@ -77,7 +77,7 @@ export default function Home() {
                 From moving to Canada all by myself at the age 15, to starting
                 the programming club at my high school, interning as a financial
                 analyst at a tech start-up, and taking on a software engineer
-                intern position at KPMG I have always been passionate about
+                intern position at KPMG, I have always been passionate about
                 innovation and eager to take on new challenges.
                 <br />
                 <br />
