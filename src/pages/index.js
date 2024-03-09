@@ -122,7 +122,7 @@ export default function Home() {
           </div>
         </section>
         <Divider />
-        <section id="Projects" className="min-h-screen pt-8 md:pt-18">
+        <section id="Projects" className="min-h-screen pt-8 md:pt-24">
           <div className="container mx-auto px-4 py-8">
             <h2 className="md:text-5xl text-4xl font-bold text-white mb-10 text-center">
               Projects
