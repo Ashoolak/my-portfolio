@@ -12,6 +12,7 @@ const workExperiences = [
       'C#',
       'Vue.js',
       'Azure DevOps',
+      'Git',
       'Microsoft SQL Server',
       'Scrum',
       'REST API',
