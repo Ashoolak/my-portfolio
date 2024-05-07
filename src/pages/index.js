@@ -58,7 +58,7 @@ export default function Home() {
                 ref={shortAboutRef}
               >
                 <li>3rd year Computer Science student at the UBC</li>
-                <li>Software Engineering Intern at KPMG</li>
+                <li>Prev. Software Engineering Intern at KPMG</li>
                 <li>Software Developer at UBC Launchpad</li>
                 <li>
                   Passionate about software development and problem solving
