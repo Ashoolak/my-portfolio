@@ -6,7 +6,7 @@ const workExperiences = [
     location: 'Toronto, ON',
     title: 'Software Engineer Intern',
     description:
-      "Contributed to AMDS (Asset Management Digital Solutions) projects, enhancing both desktop and web applications.;Architected a novel module for a new income bucket, devising strategic formulas to optimize tax payments, minimizing the company's tax liabilities.;Optimized export functions by making them dynamic, eliminating Excel text scans, and achieving a 13% reduction in average export time across various income bucket modules.;Developed an automated Excel comparison tool, reducing export file testing time from over 2 hours to under 10 minutes.",
+      'Addressed client support tickets, identifying and resolving errors within the C# and Vue.js codebases, which honed my debugging skills and improved my proficiency with large, complex code structures using object-oriented programming.;Created a full-stack module to automate USD to CAD exchange rate retrieval, integrating front-end, back-end, and database management, not only streamlining financial reporting but also reducing manual data checks by 90%.;Optimized the Excel export process by implementing a new C# method that consolidated data into an array before exporting to Excel, cutting export times by 60%.;Actively participated in Agile development cycles, using Azure DevOps to better coordinate with the team and ensure timely delivery of software updates and features.',
     imageUrl: '/companies/KPMG.png',
     skills: [
       'C#',
@@ -14,9 +14,10 @@ const workExperiences = [
       'Azure DevOps',
       'Microsoft SQL Server',
       'Scrum',
-      'Agile Development',
       'REST API',
       'Excel',
+      'Agile Development',
+      'Sprint',
     ],
   },
   {
