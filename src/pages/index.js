@@ -57,7 +57,11 @@ export default function Home() {
                 className={`${aboutStyles.shortAbout} ${aboutStyles.hidden}`}
                 ref={shortAboutRef}
               >
-                <li>3rd year Computer Science student at the UBC</li>
+                <li>4th year Computer Science student at the UBC</li>
+                <li>
+                  Founder of the largest tech/business internship newsletter in
+                  North America
+                </li>
                 <li>Prev. Software Engineering Intern at KPMG</li>
                 <li>Software Developer at UBC Launchpad</li>
                 <li>
@@ -76,8 +80,9 @@ export default function Home() {
               >
                 From moving to Canada all by myself at the age 15, to starting
                 the programming club at my high school, interning as a financial
-                analyst at a tech start-up, and taking on a software engineer
-                intern position at KPMG, I have always been passionate about
+                analyst at a tech start-up, taking on a software engineer intern
+                position at KPMG, and co-founding a newsletter with 10s of
+                thousands of subscribers I have always been passionate about
                 innovation and eager to take on new challenges.
                 <br />
                 <br />
@@ -85,9 +90,9 @@ export default function Home() {
                 programming skills to good use by developing practical solutions
                 for individuals and businesses. More than that, I want to lend a
                 helping hand to young people who are just beginning their
-                careers. Whether it's through mentoring or simply sharing what
-                I've learned, my goal is to make the journey a bit easier for
-                those who are just starting out.
+                careers. Whether it's through creating software in that field or
+                simply sharing what I've learned, my goal is to make the journey
+                a bit easier for those who are just starting out.
               </p>
             </div>
             <div className={aboutStyles.profileImageContainer}>

@@ -1,6 +1,27 @@
 const workExperiences = [
   {
     id: 1,
+    companyName: 'Intern Insider',
+    period: 'December 2023 - Present',
+    location: 'Vancouver, BC',
+    title: 'Co-founder & Developer',
+    description:
+      'Grew subscriber base to over 50,000 with a 60% open rate within 9 months, making it the largest of its kind in North America.;Engineered an AWS-hosted job scraper that daily scrapes 2,600+ company job boards, utilizing OpenAI’s API to generate descriptions and tags, reducing manual entry time by 90%.;Automated content production process, reducing time from 40 to 5 minutes and increasing open rates by 8%.',
+    imageUrl: '/companies/InternInsider.png',
+    skills: [
+      'AWS',
+      'Python',
+      'OpenAI API',
+      'Automation',
+      'Content Production',
+      'Web Scraping',
+      'Data Analysis',
+      'Email Marketing',
+      'Beehiiv',
+    ],
+  },
+  {
+    id: 2,
     companyName: 'KPMG',
     period: 'September 2023 - Present',
     location: 'Toronto, ON',
@@ -22,9 +43,9 @@ const workExperiences = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     companyName: 'Univeristy of British Columbia',
-    period: 'May 2023 - Auguest 2023',
+    period: 'May 2023 - August 2023',
     location: 'Vancouver, BC',
     title: 'Web Developer',
     description:
@@ -44,18 +65,18 @@ const workExperiences = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     companyName: 'UBC Launchpad',
     period: 'September 2023 - Present',
     location: 'Vancovuer, BC - Remote',
     title: 'Software Engineer',
     description:
-      'Contributed to the migration of EpiLog, a seizure tracking app, from Flutter to React Native, focusing on performance enhancements and UI improvements.;Participated in optimizing app features during the migration, ensuring efficient functionality and user engagement.;Elevated the user interface of EpiLog in the React Native platform, achieving a more efficient user experience',
+      'Contributed to the migration of EpiLog, a seizure tracking app, from Flutter to React Native, focusing on performance enhancements and UI improvements.;Participated in optimizing app features during the migration, ensuring efficient functionality and user engagement.;Elevated the user interface of EpiLog in the React Native platform, achieving a more efficient user experience.',
     imageUrl: '/companies/Launchpad.png',
-    skills: ['Reach Native', 'Flutter', 'Express JS', 'Firebase', 'Teamwork'],
+    skills: ['React Native', 'Flutter', 'Express JS', 'Firebase', 'Teamwork'],
   },
   {
-    id: 4,
+    id: 5,
     companyName: 'Innovenium Technologies Inc.',
     period: 'May 2022 - August 2022',
     location: 'Vancouver, BC',
