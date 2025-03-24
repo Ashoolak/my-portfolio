@@ -80,10 +80,11 @@ export function InternInsider() {
         <h3 className="text-2xl font-bold mb-4">Platform Overview</h3>
         <p className="text-[hsl(var(--muted-foreground))] mb-6">
           Built and scaled Intern Insider to become North America's largest tech
-          and business internship platform, providing opportunities to students
-          nationwide. Our infrastructure monitors 10,000+ companies every 15
-          minutes using advanced web scraping and AI-powered data cleaning
-          technology to ensure high-quality listings.
+          and business internship platform, creating solutions for universities
+          to help them find more opportunities for their students and connect
+          them with employers. Our infrastructure monitors 10,000+ companies
+          every 15 minutes using advanced web scraping and AI-powered data
+          cleaning technology to ensure high-quality listings.
         </p>
         <div className="flex flex-col sm:grid sm:grid-cols-3 gap-4 sm:gap-8 mt-6">
           <div className="glass-effect p-3 sm:p-4 rounded-xl text-center">
