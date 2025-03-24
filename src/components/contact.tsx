@@ -64,7 +64,7 @@ export function Contact() {
 
           <div className="flex gap-4 mt-6">
             <motion.a
-              href="https://github.com/AshhWu"
+              href="https://github.com/ashoolak"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full glass-effect"
@@ -74,7 +74,7 @@ export function Contact() {
               <FaGithub className="w-5 h-5" />
             </motion.a>
             <motion.a
-              href="https://linkedin.com/in/ashkan-yazdizadeh"
+              href="https://linkedin.com/in/ashkan-yazdi-zadeh"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full glass-effect"
@@ -84,7 +84,7 @@ export function Contact() {
               <FaLinkedin className="w-5 h-5" />
             </motion.a>
             <motion.a
-              href="https://twitter.com/ashh_wu"
+              href="https://x.com/Ashoolak82"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full glass-effect"

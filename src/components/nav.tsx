@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useTheme } from 'next-themes';
 import { FiSun, FiMoon, FiMenu, FiX } from 'react-icons/fi';
+import Link from 'next/link';
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -58,41 +59,64 @@ export function Nav() {
         </motion.a>
 
         <div className="hidden md:flex items-center space-x-8">
-          {menuItems.map((item) => (
-            <motion.a
-              key={item.name}
-              href={item.href}
-              className="hover:text-[hsl(var(--primary))] transition-colors"
-              whileHover={{ y: -2 }}
+          <nav className="flex items-center gap-6">
+            <Link
+              href="#about"
+              className="text-base font-medium transition-colors hover:text-primary"
             >
-              {item.name}
-            </motion.a>
-          ))}
-
-          {mounted && (
-            <motion.button
-              onClick={toggleTheme}
-              className="p-2 rounded-full glass-effect"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
+              About
+            </Link>
+            <Link
+              href="#intern-insider"
+              className="text-base font-medium transition-colors hover:text-primary"
             >
-              {theme === 'dark' ? <FiSun /> : <FiMoon />}
-            </motion.button>
-          )}
+              My Company
+            </Link>
+            <Link
+              href="#experience"
+              className="text-base font-medium transition-colors hover:text-primary"
+            >
+              Experience
+            </Link>
+            <Link
+              href="#skills"
+              className="text-base font-medium transition-colors hover:text-primary"
+            >
+              Skills
+            </Link>
+            <Link
+              href="#contact"
+              className="text-base font-medium transition-colors hover:text-primary"
+            >
+              Contact
+            </Link>
+            <a
+              href="/Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-base font-medium transition-colors hover:text-primary"
+            >
+              Resume
+            </a>
+            {mounted && (
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                className="flex h-7 w-7 items-center justify-center rounded-md border border-input bg-background"
+              >
+                {theme === 'dark' ? (
+                  <FiSun className="h-5 w-5" />
+                ) : (
+                  <FiMoon className="h-5 w-5" />
+                )}
+                <span className="sr-only">Toggle theme</span>
+              </motion.button>
+            )}
+          </nav>
         </div>
 
         <div className="md:hidden flex items-center">
-          {mounted && (
-            <motion.button
-              onClick={toggleTheme}
-              className="p-2 mr-2 rounded-full glass-effect"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              {theme === 'dark' ? <FiSun /> : <FiMoon />}
-            </motion.button>
-          )}
-
           <motion.button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="p-2 rounded-full glass-effect"
