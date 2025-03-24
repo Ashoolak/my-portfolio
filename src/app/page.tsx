@@ -238,8 +238,9 @@ export default function Home() {
                 Other Work Experience
               </h2>
               <p className="text-xl text-[hsl(var(--muted-foreground))] max-w-3xl mx-auto">
-                My professional journey has equipped me with a diverse set of
-                skills and experiences beyond Intern Insider.
+                My corporate experience at industry leaders, where I've had the
+                opportunity to work both independently and as part of
+                large-scale engineering teams.
               </p>
             </motion.div>
             <WorkExperience />
